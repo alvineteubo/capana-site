@@ -1,0 +1,26 @@
+IMAGES À FOURNIR — Dossier : assets/images/services/
+============================================================
+
+1. accompagnement-agro-pastoral.jpg
+   → Taille : 700 × 460 px minimum (section intro)
+   → Sujet : Réunion terrain entre un conseiller et un porteur de projet,
+             visite d'un site agricole ou pastoral, discussion documents
+   → Contexte : Section intro (page Services)
+
+2. redaction-projet-agro.jpg
+   → Taille : 380 × 180 px minimum (carte service)
+   → Sujet : Personne rédigeant un document de projet, ordinateur ou
+             papiers sur une table, ambiance bureau ou terrain
+   → Contexte : Carte "Rédaction de projets agro-pastoraux" (page Services)
+
+3. formation-agro-terrain.jpg
+   → Taille : 380 × 180 px minimum (carte service)
+   → Sujet : Formation pratique en contexte agricole ou pastoral,
+             groupe de personnes autour d'un formateur sur le terrain
+   → Contexte : Carte "Formation" (page Services)
+
+4. suivi-projet-terrain.jpg
+   → Taille : 380 × 180 px minimum (carte service)
+   → Sujet : Visite de suivi d'un projet — prise de notes sur le terrain,
+             inspection d'un site d'exploitation, vérification des avancées
+   → Contexte : Carte "Suivi de mise en œuvre" (page Services)

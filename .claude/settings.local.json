@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"C:\\\\Users\\\\ADVANCE-IT\\\\Downloads\\\\CAPANA\"; $env:PYTHONIOENCODING=\"utf-8\"; python generate_placeholders.py 2>&1)"
+    ]
+  }
+}

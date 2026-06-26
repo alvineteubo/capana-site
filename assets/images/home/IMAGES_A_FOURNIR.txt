@@ -1,0 +1,47 @@
+IMAGES À FOURNIR — Dossier : assets/images/home/
+============================================================
+Format recommandé : JPG, qualité 80-85 %, format WebP en bonus
+Toutes les images doivent être en mode paysage (landscape)
+
+1. hero-rucher-bangangte.jpg
+   → Taille : 1400 × 520 px minimum (bannière plein écran)
+   → Sujet : Vue panoramique du rucher de CAPANA à Bangangté
+             (rangées de ruches dans la végétation de l'Ouest Cameroun)
+   → Contexte : Diapositive 1 du carousel hero (page Accueil)
+
+2. hero-miel-pots-recolte.jpg
+   → Taille : 1400 × 520 px minimum (bannière plein écran)
+   → Sujet : Pots de miel CAPANA en gros plan, cadres de ruche,
+             récolte en cours ou produits finis
+   → Contexte : Diapositive 2 du carousel hero (page Accueil)
+
+3. hero-formation-apicole.jpg
+   → Taille : 1400 × 520 px minimum (bannière plein écran)
+   → Sujet : Personnes en tenue apicole lors d'une formation
+             au rucher de Bangangté, manipulation de cadres
+   → Contexte : Diapositive 3 du carousel hero (page Accueil)
+
+4. fondateur-mbiagni-valery.jpg
+   → Taille : 700 × 520 px minimum (portrait 1:1 ou 3:4)
+   → Sujet : Photo de M. Mbiagni Valéry, fondateur de CAPANA,
+             de préférence devant des ruches ou tenant des cadres
+   → Contexte : Section "Notre histoire" (Accueil) + page À propos
+   → Recadrage CSS : object-position center top (focus visage)
+
+5. rucher-colonies-miel.jpg
+   → Taille : 700 × 460 px minimum
+   → Sujet : Ruches en activité, abeilles visibles, colonies actives,
+             cadres avec miel operculé
+   → Contexte : Section Mission (page À propos, fond vert sauge)
+
+6. vue-rucher-moderne.jpg
+   → Taille : 700 × 460 px minimum
+   → Sujet : Vue d'ensemble du rucher — rangées de ruches modernes,
+             cadre naturel de Bangangté
+   → Contexte : Section "Le rucher de Bangangté" (page À propos)
+
+7. rucher-recolte-miel.jpg
+   → Taille : 700 × 460 px minimum
+   → Sujet : Récolte du miel en cours — extracteur, cadres chargés
+             de miel, pots remplis en atelier
+   → Contexte : Section "Engagement qualité" (page Accueil)

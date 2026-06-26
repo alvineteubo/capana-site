@@ -1,0 +1,17 @@
+IMAGES À FOURNIR — Dossier : assets/images/formations/
+============================================================
+
+1. formation-apicole-terrain.jpg
+   → Taille : 700 × 460 px minimum (section intro + bannière accueil)
+   → Sujet : Apiculteur formateur avec des apprenants au rucher,
+             manipulation de cadres, tenues apicoles portées,
+             setting naturel à Bangangté
+   → Contexte : Section intro (page Formations) + bannière (page Accueil)
+   → Recadrage CSS : object-position center 30% (focus sur les personnes)
+
+2. participants-formation-rucher.jpg
+   → Taille : 700 × 380 px minimum (section inscription)
+   → Sujet : Groupe de participants en tenues apicoles, assis en cercle
+             ou en activité autour des ruches, ambiance conviviale
+   → Contexte : Bannière d'inscription (page Formations, fond vert sauge)
+   → Recadrage CSS : object-position center 40%

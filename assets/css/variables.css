@@ -1,0 +1,19 @@
+:root{
+  --brun:#1A1410;
+  --dore:#C88A0A;
+  --dore-btn:#D4920E;
+  --dore-hover:#E8A317;
+  --dore-bg:#FDF3D8;
+  --sauge:#3D5C1E;
+  --sauge-dark:#2e4515;
+  --sauge-light:#EEF3E6;
+  --creme:#FAF6EE;
+  --creme2:#F3EBD8;
+  --rule:#E2D5BC;
+  --texte:#1A1410;
+  --texte-mid:#3E3529;
+  --texte-muted:#6B6255;
+  --blanc:#FFFFFF;
+  --ff-d:'Fraunces',serif;
+  --ff-b:'Inter',sans-serif;
+}

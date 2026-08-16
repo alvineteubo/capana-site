@@ -1,4 +1,4 @@
-i/* ============================================================
+/* ============================================================
    CAPANA — Styles pour les images (réelles + fallbacks)
    Ajouter les fichiers images dans assets/images/[catégorie]/
    ============================================================ */
@@ -14,6 +14,13 @@ i/* ============================================================
   object-fit: cover;
   object-position: center center;
   display: block;
+  filter: saturate(1.1) contrast(1.04) brightness(1.06);
+  transform: scale(1.05);
+}
+
+.slide-2 .slide-bg img {
+  object-position: center 42%;
+  transform: scale(1.02);
 }
 
 /* --------------------------------------------------

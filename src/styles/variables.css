@@ -1,0 +1,53 @@
+/* Jetons de design de la charte CAPANA. Toutes les couleurs et tailles passent par ces variables. */
+:root {
+  /* Palette */
+  --color-cream: #f8f5ec;
+  --color-white: #ffffff;
+  --color-green: #55764b;
+  --color-green-deep: #234332;
+  --color-gold: #d9a441;
+  --color-brown: #604b38;
+  --color-text: #292a25;
+
+  /* Rôles */
+  --bg: var(--color-cream);
+  --surface: var(--color-white);
+  --text: var(--color-text);
+  --text-muted: var(--color-brown);
+  --accent: var(--color-green);
+  --accent-contrast: var(--color-green-deep);
+  --highlight: var(--color-gold);
+  --focus-ring: var(--color-green-deep);
+
+  /* Typographie */
+  --font-title: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --text-2xl: clamp(2rem, 1.4rem + 2.5vw, 3.25rem);
+  --text-hero: clamp(2.5rem, 1.5rem + 4.5vw, 5rem);
+  --leading: 1.65;
+
+  /* Espacements */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --container: 72rem;
+
+  /* Formes et mouvement */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --shadow-soft: 0 1px 2px rgb(41 42 37 / 0.06), 0 4px 16px rgb(41 42 37 / 0.05);
+  --transition: 200ms ease;
+  --touch-min: 44px;
+}

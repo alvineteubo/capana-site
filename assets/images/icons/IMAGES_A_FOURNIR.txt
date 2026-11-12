@@ -1,9 +1,0 @@
-IMAGES À FOURNIR — Dossier : assets/images/icons/
-============================================================
-Dossier réservé aux icônes et images de petite taille (logos partenaires,
-icônes de certification, badges qualité, etc.)
-
-Suggestions :
-- logo-rccm.png (120 × 60 px) — logo ou badge RCCM Bangangté
-- icone-miel-naturel.svg — icône pot de miel pour usage répété
-- icone-ruche.svg — icône ruche hexagonale CAPANA

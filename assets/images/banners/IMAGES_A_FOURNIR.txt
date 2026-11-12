@@ -1,7 +1,0 @@
-IMAGES À FOURNIR — Dossier : assets/images/banners/
-============================================================
-Dossier réservé aux futures bannières plein-format supplémentaires.
-
-Suggestions :
-- banniere-miel-naturel.jpg (1400 × 300 px) — fond pour la section garantie ou contact
-- banniere-page-accueil.jpg (1400 × 520 px) — alternative hero principal

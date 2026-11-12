@@ -1,3 +1,0 @@
-Déposez ici le logo officiel de CAPANA (SVG de préférence, sinon PNG).
-Ne le modifiez pas : il sera utilisé tel quel par le site.
-Voir le README du projet pour les 3 étapes d'intégration.

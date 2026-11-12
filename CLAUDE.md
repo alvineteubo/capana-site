@@ -7,13 +7,16 @@
 La branche courante (`refonte-capana`) contient l'ancien site statique (fichiers HTML à la racine, `assets/css`, `assets/js`, scripts Python, etc.), récupéré depuis la branche `working`. Ce n'est PAS une base à reprendre : le nouveau site est un projet React + Vite créé de zéro dans cette branche. L'ancien code reste disponible dans `master` et `working`.
 
 Ressources à conserver :
-- **Logo officiel** : PAS ENCORE FOURNI. Je l'ajouterai moi-même plus tard (voir « Logo provisoire » en section 4).
+- **Logo officiel** : deux fichiers JPEG sur fond blanc, que je dépose dans `ressources/logo/` :
+  - `capana-logo.jpeg` : logo seul (mot « CAPANA » en vert, rouge et jaune, avec deux alvéoles hexagonales jaunes) ;
+  - `capana-logo-signature.jpeg` : le même logo avec la signature « Centre Apicole de Production Artificiel de Nucléi d'Abeille ».
+  Ne les supprime pas et ne les modifie pas : ce sont les originaux.
 - **Photos fournies par CAPANA** : tous les fichiers `.png`, `.jpg` et `.jpeg` de `assets/images/products/` et `assets/images/services/`. Ce sont les seules photos de référence.
 - **À ignorer** : tous les fichiers `.svg` de ces dossiers (anciennes illustrations provisoires générées) et les fichiers `IMAGES_A_FOURNIR.txt`. Ne les réutilise pas.
 - **Ancien cahier des charges** : `CAPANA_Specifications_Site_Web.docx`, à déplacer dans `docs/`. En cas de contradiction, le présent fichier fait foi.
 
 Pendant l'étape 1 :
-1. Avec `git mv`, déplace les photos fournies dans `ressources/photos/` (crée aussi `ressources/logo/` avec un fichier `LISEZMOI.txt` qui indique d'y déposer le logo officiel). Renomme proprement au passage : `miel-bocal-demi-littre.jpeg` → `miel-bocal-demi-litre.jpeg`, `accompagrer-les-porteur-projet.jpeg` → `accompagner-les-porteurs-projet.jpeg`. Garde les autres noms.
+1. Avec `git mv`, déplace les photos fournies dans `ressources/photos/` (le logo est déjà dans `ressources/logo/`). Renomme proprement au passage : `miel-bocal-demi-littre.jpeg` → `miel-bocal-demi-litre.jpeg`, `accompagrer-les-porteur-projet.jpeg` → `accompagner-les-porteurs-projet.jpeg`. Garde les autres noms.
 2. Supprime l'ancien site de cette branche : HTML, `assets/`, scripts Python et fichiers de l'ancienne génération. Ne supprime jamais le dossier `.git`, `.claude/`, ni ce fichier `CLAUDE.md`.
 3. Ne modifie, n'affiche et ne committe jamais de fichiers de configuration personnels (`.bashrc`, `.profile`, `.zshrc`, `.gitconfig`, `.mcp.json`, `.idea/`, `.vscode/`…). S'ils sont suivis par Git, signale-le-moi au lieu d'agir.
 4. Fais deux commits distincts : `chore: move brand assets to ressources` puis `chore: remove legacy static site`. Crée le projet Vite seulement ensuite.
@@ -120,16 +123,25 @@ Compositions éditoriales asymétriques, grandes photographies immersives, espac
 ## 4. LOGO, ÉTIQUETTE ET PHOTOGRAPHIES
 
 Obligatoire :
-- Quand il sera fourni, utiliser le véritable logo, sans le redessiner, le déformer, le recolorer ni le régénérer.
+- Utiliser le véritable logo fourni, sans le redessiner, le vectoriser à la main, le déformer, le recolorer ni le régénérer.
 - Utiliser la véritable photographie du pot de Miel du Ndé. Ne jamais modifier l'étiquette ni son texte, ne jamais la remplacer par un pot fictif.
 - Faire du Miel du Ndé le produit emblématique de l'expérience visuelle.
 
-Logo provisoire (le logo officiel n'est pas encore fourni) :
-- Crée un seul composant `src/components/Logo.jsx`, utilisé partout (en-tête, pied de page, menu mobile).
-- En attendant, ce composant affiche le mot « CAPANA » en texte, avec la police des titres de la charte. Ne dessine aucun symbole et n'imite pas le logo (ni hexagone, ni abeille stylisée en guise de logo).
-- Le composant doit accepter facilement une image : prévois dans `src/config/site.js` une propriété `logo: null` ; quand elle contient un chemin (ex. `/logo/capana.svg`), le composant affiche l'image avec un texte alternatif « CAPANA ».
-- Favicon provisoire : la lettre « C » sur fond vert profond, en SVG, à remplacer plus tard.
-- Le README explique en 3 étapes comment ajouter le logo officiel (où déposer le fichier, quelle ligne modifier, comment régénérer le favicon).
+Intégration du logo :
+- Les fichiers fournis sont des JPEG sur fond blanc. Crée par script (`scripts/`, avec `sharp`) des versions web dans `public/logo/` : recadrage des marges blanches, fond blanc rendu transparent (PNG et WebP), plusieurs tailles. C'est un traitement technique : les formes, couleurs et proportions restent identiques. Vérifie le résultat visuellement (bords nets, pas de halo blanc sur fond crème ou vert).
+- En-tête et menu mobile : version sans signature. Pied de page : version avec signature si elle reste lisible, sinon sans signature.
+- Sur fond vert profond (footer), place le logo sur une pastille ou un bloc clair pour garder les couleurs lisibles ; ne l'inverse pas en blanc.
+- Un seul composant `src/components/Logo.jsx`, utilisé partout, avec le texte alternatif « CAPANA ». Le chemin du logo est défini dans `src/config/site.js`.
+- Favicon et icônes (16, 32, 180, 512 px) générés à partir du logo sans signature, sur fond blanc carré. Si le mot reste illisible en 16/32 px, utilise uniquement un recadrage des alvéoles jaunes du logo officiel, sans rien redessiner.
+- Note dans le README qu'une version vectorielle officielle (SVG, AI ou PDF) remplacera avantageusement les JPEG si CAPANA peut la fournir.
+
+Harmonie des couleurs :
+- Le logo utilise un vert vif, un rouge et un jaune soutenu. Ces couleurs restent dans le logo uniquement.
+- La charte du site reste celle de la section 3. N'ajoute pas de rouge dans l'interface.
+- Mesure le jaune du logo. Si l'or miel `#D9A441` semble discordant à côté, ajuste-le légèrement vers ce jaune en gardant un contraste suffisant, et note la valeur finale dans `variables.css`.
+
+Informations tirées du logo :
+- CAPANA signifie « Centre Apicole de Production Artificiel de Nucléi d'Abeille ». Recopie cette signature exactement, sans la corriger. Elle confirme que la production de nucléi (colonies d'abeilles) est au cœur de l'activité : mets-la en valeur sur la page L'entreprise et dans la rubrique Essaims et élevage, sans inventer de chiffres.
 
 Traitement des images :
 - Tu peux redimensionner, recadrer, corriger légèrement la lumière et le contraste, et convertir en WebP (avec `sharp` en dépendance de développement, ou un script dans `scripts/`). Fournis plusieurs tailles quand c'est utile (`srcset`).
@@ -252,7 +264,7 @@ Organisation indicative (à améliorer si c'est plus propre, sans complexifier) 
 
 ```text
 capana-website/
-├── public/            (logo, images, favicon, _headers, _redirects)
+├── public/            (logo/, images/, favicon, _headers, _redirects)
 ├── src/
 │   ├── components/    (Header, Footer, ProductCard, WhatsAppButton, Seo, …)
 │   ├── pages/         (Home, About, Products, ProductDetails, Services, Training, Gallery, Contact, Cart, Legal, Privacy, NotFound)
@@ -311,7 +323,7 @@ Pages chargées à la demande (`React.lazy`) si cela allège le premier chargeme
 - Titre et meta description uniques pour chaque page (petit composant `Seo` qui met à jour `document.title` et les metas).
 - Balises Open Graph par défaut dans `index.html`, avec la photo du Miel du Ndé (les réseaux sociaux ne lisent que celles-ci sur un site React classique).
 - `lang="fr"`, URLs propres, `robots.txt`, `sitemap.xml` (domaine à compléter), données structurées `LocalBusiness` sans information inventée.
-- Images optimisées (WebP si possible, dimensions définies, `loading="lazy"` hors hero), favicon provisoire (voir section 4), à remplacer par le logo officiel.
+- Images optimisées (WebP si possible, dimensions définies, `loading="lazy"` hors hero), favicon issu du logo CAPANA (voir section 4).
 - Mots-clés naturels : apiculture, miel, produits de la ruche, équipements apicoles, Bangangté, Ouest Cameroun. Aucune répétition artificielle.
 
 ## 15. TON ÉDITORIAL

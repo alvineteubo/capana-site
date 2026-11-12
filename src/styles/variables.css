@@ -51,3 +51,11 @@
   --transition: 200ms ease;
   --touch-min: 44px;
 }
+
+/* Mise en page */
+:root {
+  --line: rgb(35 67 50 / 0.14);
+  --line-on-dark: rgb(248 245 236 / 0.18);
+  --header-height: 4.75rem;
+  --section-space: clamp(3.5rem, 2rem + 7vw, 7.5rem);
+}

@@ -1,0 +1,63 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--touch-min);
+  padding: 0.625rem 1.375rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 550;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    border-color var(--transition),
+    color var(--transition);
+}
+
+.button svg {
+  flex: none;
+  transition: transform var(--transition);
+}
+
+.button:hover svg {
+  transform: translateX(3px);
+}
+
+.button--principal {
+  background: var(--color-green-deep);
+  color: var(--color-cream);
+}
+
+.button--principal:hover {
+  background: var(--color-green);
+}
+
+.button--secondaire {
+  border-color: rgb(35 67 50 / 0.45);
+  color: var(--color-green-deep);
+  background: transparent;
+}
+
+.button--secondaire:hover {
+  border-color: var(--color-green-deep);
+  background: rgb(35 67 50 / 0.06);
+}
+
+.button--clair {
+  background: var(--color-cream);
+  color: var(--color-green-deep);
+}
+
+.button--clair:hover {
+  background: var(--color-white);
+}
+
+.button:disabled,
+.button[aria-disabled='true'] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}

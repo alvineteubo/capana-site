@@ -78,3 +78,86 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Lien d'évitement : visible seulement au focus clavier. */
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 100;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-green-deep);
+  color: var(--color-cream);
+  border-radius: var(--radius-sm);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.section {
+  padding-block: var(--section-space);
+}
+
+.section--blanc {
+  background: var(--surface);
+}
+
+/* Grille éditoriale à 12 colonnes, utilisée pour les compositions décalées. */
+.grille {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(1rem, 2.5vw, 2rem);
+  row-gap: var(--space-8);
+}
+
+.grille > * {
+  grid-column: 1 / -1;
+}
+
+.filet {
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: var(--line);
+}
+
+/*
+  Apparition très légère au défilement, en CSS pur (aucun JavaScript).
+  Le contenu est visible par défaut : l'effet ne s'applique que si le navigateur
+  gère les animations liées au défilement et si l'utilisateur n'a pas demandé
+  à réduire les animations.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0.25;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

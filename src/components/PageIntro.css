@@ -1,0 +1,26 @@
+.page-intro {
+  padding-block: clamp(3rem, 2rem + 6vw, 6.5rem) var(--section-space);
+}
+
+.page-intro .section-title--h1 .section-title__titre {
+  font-size: var(--text-2xl);
+  line-height: 1.1;
+}
+
+.page-intro__suite {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--line);
+}
+
+.page-intro__note {
+  max-width: 38rem;
+  color: var(--color-brown);
+}
+
+.page-intro__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}

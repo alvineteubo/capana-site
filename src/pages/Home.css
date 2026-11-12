@@ -1,0 +1,14 @@
+.home-hero {
+  padding-block: clamp(3.5rem, 2rem + 8vw, 8rem) var(--section-space);
+}
+
+.home-hero .section-title {
+  max-width: 56rem;
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}

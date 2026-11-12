@@ -1,0 +1,19 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.layout__contenu {
+  flex: 1;
+}
+
+.layout__contenu:focus {
+  outline: none;
+}
+
+.layout__chargement {
+  padding: var(--section-space) var(--gutter);
+  text-align: center;
+  color: var(--color-brown);
+}

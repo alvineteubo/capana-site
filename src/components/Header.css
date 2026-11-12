@@ -1,0 +1,132 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgb(248 245 236 / 0.9);
+  backdrop-filter: saturate(1.4) blur(12px);
+  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.header--resserre {
+  border-bottom-color: var(--line);
+}
+
+.header__barre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  height: var(--header-height);
+  transition: height var(--transition);
+}
+
+.header--resserre .header__barre {
+  height: 4rem;
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  --logo-height: 3.25rem;
+}
+
+.header--resserre .header__logo {
+  --logo-height: 2.875rem;
+}
+
+@media (min-width: 62rem) {
+  .header__logo {
+    --logo-height: 3.75rem;
+  }
+
+  .header--resserre .header__logo {
+    --logo-height: 3rem;
+  }
+}
+
+.header__nav {
+  display: none;
+  margin-left: auto;
+}
+
+.header__nav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__lien {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-min);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+/* Souligné doré : discret au survol, plein sur la page active. */
+.header__lien::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.5rem;
+  height: 2px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+.header__lien:hover,
+.header__lien[aria-current='page'] {
+  color: var(--color-green-deep);
+}
+
+.header__lien:hover::after,
+.header__lien[aria-current='page']::after {
+  transform: scaleX(1);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.header__menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch-min);
+  height: var(--touch-min);
+  margin-right: -0.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-green-deep);
+  cursor: pointer;
+}
+
+.header__menu:hover {
+  background: rgb(35 67 50 / 0.07);
+}
+
+@media (min-width: 62rem) {
+  .header__nav {
+    display: block;
+  }
+
+  .header__menu {
+    display: none;
+  }
+}

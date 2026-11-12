@@ -2,7 +2,7 @@
 export const site = {
   nom: 'CAPANA',
   // Signature officielle, recopiée telle qu'elle figure sur le logo. Ne pas corriger.
-  signature: "Centre Apicole de Production Artificiel de Nucléi d'Abeille",
+  signature: "Centre Apicole de Production Artificiel de Nucléi d’Abeille",
   localisation: 'Bangangté, Ndé, Ouest Cameroun',
 
   // Logo web généré par `npm run logo` à partir de ressources/logo/ (voir README).

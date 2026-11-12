@@ -1,0 +1,32 @@
+.cart-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch-min);
+  height: var(--touch-min);
+  border-radius: 50%;
+  color: var(--color-green-deep);
+  transition: background-color var(--transition);
+}
+
+.cart-link:hover {
+  background: rgb(35 67 50 / 0.07);
+}
+
+.cart-link__compteur {
+  position: absolute;
+  top: 3px;
+  right: 1px;
+  min-width: 1.125rem;
+  height: 1.125rem;
+  padding-inline: 0.25rem;
+  border-radius: 999px;
+  background: var(--color-gold);
+  color: var(--color-text);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1.125rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
